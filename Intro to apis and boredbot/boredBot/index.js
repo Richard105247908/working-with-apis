@@ -27,14 +27,8 @@ it as the innerHTML of another element on the DOM)
 fetch("https://dog.ceo/api/breeds/image/random")
   .then(response => response.json())
   .then(data => {
-    const bodyTag = Document.querySelector("body");
-
-    const imgTag= document.createElement("img");
-    imgTag.src=data.message;
-    imgTag.alt="A random dog";
-    imgTag.style.maxWidth="500px";
-
-    bodyTag.appendChild(imgTag);
+    console.log(data)
+    document.getElementById("image-container").innerHTML=`<img src="${data.message}"/>`
+    
   })
-  .catch(error => console.error("Error fetching the dog image:", error));
-  )
+
