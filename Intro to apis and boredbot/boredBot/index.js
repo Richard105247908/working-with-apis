@@ -10,16 +10,31 @@ you create the image completely here in the JS and add
 it as the innerHTML of another element on the DOM)
 */
 
-fetch("https://dog.ceo/api/breeds/image/random")
-    .then(response => response.json())
-    .then(data => console.log(data))
+// fetch("https://dog.ceo/api/breeds/image/random")
+//     .then(response => response.json())
+//     .then(data => console.log(data))
 
-    bodyTag=document.querySelector("body");
-    console.log(bodyTag);
+//     bodyTag=document.querySelector("body");
+//     console.log(bodyTag);
     
-    imgTag= document.createElement("img");
-        console.log(imgTag);
-         imgTag.src=data;
+//     imgTag= document.createElement("img");
+//         console.log(imgTag);
+//          imgTag.src=data;
          
-         imgTag.appendChild(imgTag);
+//          imgTag.appendChild(imgTag);
         
+
+fetch("https://dog.ceo/api/breeds/image/random")
+  .then(response => response.json())
+  .then(data => {
+    const bodyTag = Document.querySelector("body");
+
+    const imgTag= document.createElement("img");
+    imgTag.src=data.message;
+    imgTag.alt="A random dog";
+    imgTag.style.maxWidth="500px";
+
+    bodyTag.appendChild(imgTag);
+  })
+  .catch(error => console.error("Error fetching the dog image:", error));
+  )
