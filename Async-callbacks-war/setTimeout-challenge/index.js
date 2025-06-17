@@ -13,3 +13,7 @@ document.getElementById("new-deck").addEventListener("click", handleClick)
  * 
  * Part 2: Upcoming...
  */
+
+setTimeout(function() {
+    console.log("I finally ran!")
+}, 2000)
