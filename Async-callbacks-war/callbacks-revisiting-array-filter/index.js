@@ -13,11 +13,19 @@ const people = [
     { name: "Bob", hasPet: false },
 ]
 
-const peopleWithPets = people.filter(function() {
+// const peopleWithPets = people.filter(function() {
     
-})
+// })
 
 const results = people.filter(peoples => peoples.hasPet.valueOf("True"))
 //people.filter(peoples => peoples.hasPet) works thesame
 
 console.log(results) 
+
+///////////////////////////////////
+function gimmeThePets(person) {
+    return person.hasPet
+}
+
+const peopleWithPets = people.filter(gimmeThePets)
+console.log(peopleWithPets)
