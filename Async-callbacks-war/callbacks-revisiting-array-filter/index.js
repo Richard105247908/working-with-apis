@@ -18,4 +18,6 @@ const peopleWithPets = people.filter(function() {
 })
 
 const results = people.filter(peoples => peoples.hasPet.valueOf("True"))
-console.log(results)
+//people.filter(peoples => peoples.hasPet) works thesame
+
+console.log(results) 
