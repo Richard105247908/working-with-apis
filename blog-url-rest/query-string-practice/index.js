@@ -12,6 +12,6 @@ Challenge part 2: change the units into something that makes more sense to you
 than Kelvin 😂
  */
 
-fetch("https://apis.scrimba.com/openweathermap/data/2.5/weather?q=London&units=metric")
+fetch("https://apis.scrimba.com/openweathermap/data/2.5/weather?q=salt lake city&units=metric")
     .then(res => res.json())
     .then(data => console.log(data))
