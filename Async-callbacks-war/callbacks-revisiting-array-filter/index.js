@@ -12,3 +12,10 @@ const people = [
     { name: "Alice", hasPet: true },
     { name: "Bob", hasPet: false },
 ]
+
+const peopleWithPets = people.filter(function() {
+    
+})
+
+const results = people.filter(peoples => peoples.hasPet.valueOf("True"))
+console.log(results)
