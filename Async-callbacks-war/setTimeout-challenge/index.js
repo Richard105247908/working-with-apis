@@ -11,9 +11,17 @@ document.getElementById("new-deck").addEventListener("click", handleClick)
  * 
  * Part 1: write a `setTimeout` command. Have it wait for 2000 ms before logging "I finally ran!" to the console
  * 
- * Part 2: Upcoming...
+ * Part 2: Move the anonymous in-line function to its own, named function
  */
 
-setTimeout(function() {
-    console.log("I finally ran!")
-}, 2000)
+// setTimeout(function() {
+//     console.log("I finally ran!")
+// }, 2000)
+
+
+
+function callback(){
+    console.log("I finally ran!");
+}
+
+setTimeout(callback,2000);
