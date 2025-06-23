@@ -11,3 +11,16 @@
 // document.getElementById("new-deck").addEventListener("click", function() {
 //     console.log("Clicked!")
 // })
+
+const voters = [
+    {name: "Joe", email: "joe@joe.com", voted: true},
+    {name: "Jane", email: "jane@jane.com", voted: true},
+    {name: "Bo", email: "bo@bo.com", voted: false},
+    {name: "Bane", email: "bane@bane.com", voted: false}
+]
+
+// Write your code below
+const results = voters.filter(persons => persons.voted).map(persons =>persons.email)
+
+// Final result: ["joe@joe.com", "jane@jane.com"]
+console.log(results)
