@@ -23,8 +23,8 @@ const people = [
 
 function filterArray(array, callback) {
     const resultingArray = []
-    for(let i=0; i< array.length;i++){
-        if(callback(array[i])===true){
+    for(let i=0; i< array.length;i++){  //or for(let item of array)  const= shouldBeIncluded = callback(item)
+        if(callback(array[i])===true){  //if(callback(array[i]))  or if(shouldBeIncluded){resultingArray.push(item)}
             resultingArray.push(array[i])
         }
         
