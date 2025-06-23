@@ -23,9 +23,10 @@ const people = [
 
 function filterArray(array, callback) {
     const resultingArray = []
-    for(let i=0; i< array.length-1;i++){
-        if(callback(array[i]===true)){
-            push(array[i]).resultingArray
+    for(let i=0; i< array.length;i++){
+        if(array[i]===true){
+            callback(array[i]);
+            resultingArray.push(array[i])
         }
         
     }
