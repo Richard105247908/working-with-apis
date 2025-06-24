@@ -10,6 +10,7 @@ const peopleWithPets = filterArray(people, function(person) {
 
 console.log(peopleWithPets)
 
+//array function
 const peopleWithPets2 = filterArray(people,person=>{
     //const personPet=[] dont need
   return person.hasPet===true
