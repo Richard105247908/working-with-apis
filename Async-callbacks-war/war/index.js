@@ -71,20 +71,28 @@ drawCardBtn.addEventListener("click", () => {
 
 // score_card({value:"KING"},{value:"9"});
 
-cardValues=["2", "3", "4", "5", "6", "7",
-"8", "9","10","JACK","QUEEN", "KING", "ACE"];
-
-let score_card=(card1,card2)=>{
-   const card1Value =cardValues.indexOf(card1)
-   const card2Value =cardValues.indexOf(card2)
-
-    if(card1Value>card2Value){
-        console.log("card 1 wins")
-    }else if(card2Value>card1Value){
-        console.log("card 2 wins")
-    }else{
-        console.log("draw")
+function determineCardWinner(card1, card2) {
+    const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
+    "10", "JACK", "QUEEN", "KING", "ACE"]
+    const card1ValueIndex = valueOptions.indexOf(card1.value)
+    const card2ValueIndex = valueOptions.indexOf(card2.value)
+    console.log("card 1:", card1ValueIndex)
+    console.log("card 2:", card2ValueIndex)
+    
+    if (card1ValueIndex > card2ValueIndex) {
+        console.log("Card 1 wins!")
+    } else if (card1ValueIndex < card2ValueIndex) {
+        console.log("Card 2 wins!")
+    } else {
+        console.log("It's a tie!")
     }
 }
 
-score_card("2","10")
+const card1Obj = {
+    value: "JACK"
+}
+const card2Obj = {
+    value: "QUEEN"
+}
+
+determineCardWinner(card1Obj, card2Obj)
