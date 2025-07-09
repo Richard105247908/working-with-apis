@@ -28,9 +28,43 @@ drawCardBtn.addEventListener("click", () => {
 /**
  * Challenge:
  * 
- * Place each of the cards we draw into its respective card-slot
- * Hint: consider using element.children in the DOM instead of
- * giving each card-slot its own unique ID
+ * Try to determine which of the 2 cards is the "winner" (has higher value)
+ * Aces are the card with the highest "score"
  * 
- * https://developer.mozilla.org/en-US/docs/Web/API/Element/children
+ * In parts:
+ * 
+ * 1. Create a function that takes 2 card objects as parameters, 
+ * `card1` and `card2`. These card objects have a property called
+ * `value`, which can be any one of the following strings, in
+ * order of rising "score":
+ * 
+ * "2", "3", "4", "5", "6", "7", "8", "9", 
+ * "10", "JACK", "QUEEN", "KING", "ACE"
+ * 
+ * I.e. "2" is the lowest score and "ACE" is the highest.
+ * 
+ * The function should determine which of the 2 cards (`card1`
+ * or `card2`) has the higher score, or if they have the same score.
+ * 
+ * Log which card wins (or "It's a tie!" 
+ * if they're the same) to the console
  */
+cardValues={"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10, "JACK":11, "QUEEN":12, "KING":13, "ACE":14};
+
+let score_card=(card1,card2)=>{
+    card1value=cardValues[card1.value]
+    card2value=cardValues[card2.value]
+
+    if (card1value>card2value) {
+        console.log("card 1 wins")
+        
+    }if (card2value>card1value) {
+        console.log("card 2 wins")
+        
+    } else {
+        console.log("it a draw")
+    }
+    
+};
+
+score_card({value:"KING"},{value:"9"});
