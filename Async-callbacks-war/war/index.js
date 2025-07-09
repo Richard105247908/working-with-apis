@@ -32,6 +32,11 @@ drawCardBtn.addEventListener("click", () => {
             const resultTitle=determineCardWinner(data.cards[0].value,data.cards[1].value)
             winnerElement.textContent=resultTitle;
             
+            if(data.remaining===0){
+                drawCardBtn.disabled=true;
+            }
+        
+            
             
         })
 })
