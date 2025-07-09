@@ -86,3 +86,5 @@ let score_card=(card1,card2)=>{
         console.log("draw")
     }
 }
+
+score_card("2","10")
