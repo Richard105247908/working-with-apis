@@ -49,22 +49,27 @@ drawCardBtn.addEventListener("click", () => {
  * Log which card wins (or "It's a tie!" 
  * if they're the same) to the console
  */
-cardValues={"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10, "JACK":11, "QUEEN":12, "KING":13, "ACE":14};
 
-let score_card=(card1,card2)=>{
-    const card1value=cardValues[card1.value]
-    const card2value=cardValues[card2.value]
+//my code
+// cardValues={"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10, "JACK":11, "QUEEN":12, "KING":13, "ACE":14};
 
-    if (card1value>card2value) {
-        console.log("card 1 wins")
+// let score_card=(card1,card2)=>{
+//     const card1value=cardValues[card1.value]
+//     const card2value=cardValues[card2.value]
+
+//     if (card1value>card2value) {
+//         console.log("card 1 wins")
         
-    }else if (card2value>card1value) {
-        console.log("card 2 wins")
+//     }else if (card2value>card1value) {
+//         console.log("card 2 wins")
         
-    } else {
-        console.log("it a draw")
-    }
+//     } else {
+//         console.log("it a draw")
+//     }
     
-};
+// };
 
-score_card({value:"KING"},{value:"9"});
+// score_card({value:"KING"},{value:"9"});
+
+cardValues=["2", "3", "4", "5", "6", "7",
+"8", "9","10","JACK","QUEEN", "KING", "ACE"]
