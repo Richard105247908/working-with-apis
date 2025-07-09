@@ -26,7 +26,8 @@ drawCardBtn.addEventListener("click", () => {
                 <img src=${data.cards[1].image} class="card" />
             `
             
-            determineCardWinner(data.cards[0].value,data.cards[1].value)
+            const resultTitle=determineCardWinner(data.cards[0].value,data.cards[1].value)
+            winnerElement.textContent=resultTitle;
             
             
         })
@@ -86,11 +87,11 @@ function determineCardWinner(card1, card2) {
     console.log("card 2:", card2ValueIndex)
     
     if (card1ValueIndex > card2ValueIndex) {
-          winnerElement.textContent="Card 1 wins!"
+         return "Card 1 wins!"
     } else if (card1ValueIndex < card2ValueIndex) {
-         winnerElement.textContent= "Card 2 wins!"
+         return "Card 2 wins!"
     } else {
-         winnerElement.textContent= "War!"
+         return "War!"
     }
 }
 
