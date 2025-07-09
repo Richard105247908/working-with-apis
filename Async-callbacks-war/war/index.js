@@ -72,4 +72,17 @@ drawCardBtn.addEventListener("click", () => {
 // score_card({value:"KING"},{value:"9"});
 
 cardValues=["2", "3", "4", "5", "6", "7",
-"8", "9","10","JACK","QUEEN", "KING", "ACE"]
+"8", "9","10","JACK","QUEEN", "KING", "ACE"];
+
+let score_card=(card1,card2)=>{
+   const card1Value =cardValues.indexOf(card1)
+   const card2Value =cardValues.indexOf(card2)
+
+    if(card1Value>card2Value){
+        console.log("card 1 wins")
+    }else if(card2Value>card1Value){
+        console.log("card 2 wins")
+    }else{
+        console.log("draw")
+    }
+}
