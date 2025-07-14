@@ -1,4 +1,6 @@
 let deckId
+let compScore=0;
+let myScore=0;
 const cardsContainer = document.getElementById("cards")
 const newDeckBtn = document.getElementById("new-deck")
 const drawCardBtn = document.getElementById("draw-cards")
@@ -93,9 +95,9 @@ function determineCardWinner(card1, card2) {
     console.log("card 2:", card2ValueIndex)
     
     if (card1ValueIndex > card2ValueIndex) {
-         return "Card 1 wins!"
+         return "Computer wins!"
     } else if (card1ValueIndex < card2ValueIndex) {
-         return "Card 2 wins!"
+         return "You win!"
     } else {
          return "War!"
     }
