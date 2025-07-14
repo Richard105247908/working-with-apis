@@ -29,6 +29,8 @@ button.draw {
     font-size: 1.2em;
     padding: 5px;
     align-self: stretch;
+    /* margin-top: 225px; */
+    /* border: 2px solid red; */
 }
 
 div.card-slot {
@@ -39,7 +41,7 @@ div.card-slot {
 }
 
 div.card-slot:nth-of-type(1) {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 img.card {
@@ -50,6 +52,7 @@ img.card {
 div.top {
     display: flex;
     align-self: flex-start;
+    align-self: flex-start;
 }
 
 div.top > p {
@@ -59,4 +62,9 @@ div.top > p {
 
 button:disabled{
     cursor:not-allowed;
+}
+
+h2{
+        margin: 10px;
+
 }
