@@ -35,8 +35,6 @@ drawCardBtn.addEventListener("click", () => {
             if(data.remaining===0){
                 drawCardBtn.disabled=true;
             }
-        
-            
             
         })
 })
