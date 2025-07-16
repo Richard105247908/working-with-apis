@@ -6,12 +6,14 @@
  * returned from the API.
  * 
  * Don't worry about positioning the author in the lower-left yet.
- */
+ */const paraTag=document.getElementById("author");
 
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
     .then(data => {
+		console.log(data.user.name)
         document.body.style.backgroundImage = `url(${data.urls.regular})`
+		paraTag.innerText=`${data.user.name}`;
     })
     
 /**
