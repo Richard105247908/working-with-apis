@@ -27,6 +27,10 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     .then(data =>{
         console.log(data)
     })
+	.catch(err=>{
+        console.log(err)
+        
+    })
     
 /**
  * {
