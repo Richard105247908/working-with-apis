@@ -13,7 +13,7 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     .then(data => {
 		console.log(data.user.name)
         document.body.style.backgroundImage = `url(${data.urls.regular})`
-		paraTag.innerText=data.user.name;
+		paraTag.innerText=`By: ${data.user.name}`;
     })
     
 /**
